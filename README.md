@@ -1,4 +1,4 @@
-# SecurityInnovation Coding Challenge - Custom URL Shortener
+# Custom URL Shortener
 
 Short links look much better when we need to share any long URLs 
 with our friends. This custom URL Shortener tool provides a service 
