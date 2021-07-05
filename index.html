@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Custom URL Shortener</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Custom URL Shortener</h1>
+      <p>
+        Enter your URL below to get a shortened link.
+      </p>
+    </header>
+    <section id="urlForm">
+      <!--application/x-www-form-urlencoded Represents a URL encoded form. This is the default value if enctype attribute is not set to anything.-->
+      <form enctype="application/x-www-form-urlencoded" method="POST" action="/shortLink">
+        <label for="originalUrl">
+          URL
+        </label>
+        <input type="url" name="originalUrl" />
+        <label for="customUrl">
+          Custom URL Keyword
+        </label>
+        <input type="text" name="customUrl" />
+        <button type="submit">Shorten</button>
+        <!-- A a place to put our resulting short link -->
+        <p id="urlResult"></p>
+      </form>
+    </section>
+  </main>
+  <script>
+    // Get the display urlResult
+    let data = window.location.hash;
+    if (data) {
+      let originalUrl = new URL(data.substr(1));
+      if (originalUrl.protocol === window.location.protocol && originalUrl.host === window.location.host) {
+        let urlResult = document.getElementById('urlResult');
+        urlResult.innerHTML = `<a id="link" href="${originalUrl}">${originalUrl}</a>`;
+      }
+    }
+  </script>
+</body>
+</html>

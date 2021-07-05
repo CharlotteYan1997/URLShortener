@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1HowyB48yGYnm79R7+5aFraFDe+hvvqAjReH5V+eb2tosM8mnviHRlDL4lMk1eoYKbUKKYHJJN0Z05i0wrwmMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\CharlotteYan\\Documents\\SecurityInnovation\\UrlShortener.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\CharlotteYan\\.nuget\\packages\\litedb\\5.0.9\\litedb.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}
